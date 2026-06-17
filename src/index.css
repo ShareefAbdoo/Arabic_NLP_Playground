@@ -1,0 +1,28 @@
+@import './styles/tokens.css';
+@import 'tailwindcss';
+
+/* per `readable-font-size`: minimum 16px body to avoid iOS auto-zoom */
+/* per `line-height`: 1.6 for Arabic body text readability */
+body {
+  font-family: var(--font-arabic);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  direction: rtl;
+}
+
+/* per `reduced-motion`: disable all animations when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* per `focus-states`: visible 2px focus ring on all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--color-confidence-high);
+  outline-offset: 2px;
+}

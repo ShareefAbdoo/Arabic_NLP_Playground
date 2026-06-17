@@ -1,0 +1,45 @@
+/* per `color-semantic`: semantic CSS variables, not raw hex in components */
+/* per `color-dark-mode`: dark mode uses desaturated/lighter tonal variants, tested separately */
+:root {
+  --color-bg: #FAFAF8;
+  --color-surface: #F5F5F4;
+  --color-text: #1C1917;
+  --color-text-muted: #78716C;
+
+  --color-confidence-high: #22c55e;
+  --color-confidence-mid: #f59e0b;
+  --color-confidence-low: #ef4444;
+
+  /* NER entity colors — per `color-accessible-pairs`: all pairs verified ≥4.5:1 */
+  --color-entity-per-bg: #dbeafe;
+  --color-entity-per-text: #1e40af;
+  --color-entity-loc-bg: #dcfce7;
+  --color-entity-loc-text: #166534;
+  --color-entity-org-bg: #fef3c7;
+  --color-entity-org-text: #92400e;
+  --color-entity-misc-bg: #f5f5f4;
+  --color-entity-misc-text: #44403c;
+
+  --radius-panel: 8px;
+  --bar-height: 20px;
+  --font-arabic: 'Noto Naskh Arabic', serif;
+}
+
+/* per `color-dark-mode`: dark mode — desaturated surfaces, lighter tonal entity variants */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f0f0e;
+    --color-surface: #1c1b1a;
+    --color-text: #f5f5f4;
+    --color-text-muted: #a8a29e;
+
+    --color-entity-per-bg: #1e3a5f;
+    --color-entity-per-text: #bfdbfe;
+    --color-entity-loc-bg: #14532d;
+    --color-entity-loc-text: #bbf7d0;
+    --color-entity-org-bg: #78350f;
+    --color-entity-org-text: #fde68a;
+    --color-entity-misc-bg: #292524;
+    --color-entity-misc-text: #d6d3d1;
+  }
+}
